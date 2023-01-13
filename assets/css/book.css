@@ -1,0 +1,415 @@
+:root {
+    --white: white;
+    --black: #1d6798;
+    --gray: #85888C;
+}
+
+.lg {
+    border: 10px solid #1d6798;
+    border-radius: 15%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+input,
+select {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    color: #eee;
+}
+
+h1,
+h3 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h3 {
+    color: #1c87c9;
+}
+
+.main-block,
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-block {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+}
+
+.banner {
+    padding-bottom: 5%;
+}
+
+.testbox {
+    text-align: center;
+    margin: auto;
+    padding-left: 15%;
+}
+
+form {
+
+    width: 80%;
+    padding: 25px;
+    margin-bottom: 20px;
+    background: #095484;
+}
+
+input,
+select {
+    padding: 5px;
+    margin-bottom: 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+}
+
+input::placeholder {
+    color: #eee;
+}
+
+option {
+    background: black;
+    border: none;
+}
+
+.metod {
+    display: flex;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label.radio {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px;
+    text-indent: 32px;
+    cursor: pointer;
+}
+
+label.radio:before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #1c87c9;
+}
+
+label.radio:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    top: 5px;
+    left: 5px;
+    border-bottom: 3px solid #1c87c9;
+    border-left: 3px solid #1c87c9;
+    transform: rotate(-45deg);
+    opacity: 0;
+}
+
+input[type=radio]:checked+label:after {
+    opacity: 1;
+}
+
+button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 20px auto 0;
+    border: none;
+    border-radius: 5px;
+    background: #1c87c9;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+button:hover {
+    background: #095484;
+}
+
+@media (min-width: 568px) {
+    .info {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    input {
+        width: 46%;
+    }
+
+    input.fname {
+        width: 100%;
+    }
+
+    select {
+        width: 48%;
+    }
+}
+
+.map {
+    width: auto;
+    margin: auto;
+    overflow: scroll;
+    text-align: center;
+}
+
+.title {
+    padding-top: 5%;
+    font-size: 30px;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    color: #1d6798;
+    z-index: -1;
+
+}
+
+.text {
+    font-family: 'Lucida Sans';
+    z-index: -2;
+}
+
+.text1 {
+
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.title1 {
+
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+body {
+    background-color: var(--white);
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    display: inline-block;
+    color: var(--white);
+}
+
+.nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.menu a {
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+
+.menu a:hover {
+    background-color: #25aafd;
+}
+
+.nav {
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+
+.hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before {
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked~nav {
+    max-height: 100%;
+}
+
+.side-menu:checked~.hamb .hamb-line {
+    background: transparent;
+}
+
+.side-menu:checked~.hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked~.hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.imb {
+    width: 420px;
+    height: 400px;
+    border-radius: 5%;
+}
+
+@media (min-width: 768px) {
+    .content {
+        padding-top: 15%;
+        margin: auto;
+    }
+
+    .list {
+        display: none;
+    }
+
+    html,
+    body {
+        height: 5%;
+        margin: auto;
+        font-family: "Helvetica", sans-serif;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .nav {
+        max-height: none;
+        height: 50px;
+        top: 10px;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+
+    .menu li {
+        float: left;
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+        color: #25aafd;
+    }
+
+    .hamb {
+        display: none;
+    }
+
+    * {
+        margin: 0;
+    }
+
+    main {
+        position: absolute;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .title1 {
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .title {
+        height: 100px;
+        font-size: 30px;
+        color: #1d6798;
+        font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .text1 {
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    main {
+        width: 100%;
+        text-align: center;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .imb {
+        width: 300px;
+        height: 280px;
+
+    }
+
+    .text {
+        margin: auto;
+        width: 90%;
+    }
+
+
+    .title {
+        font-size: 40px;
+        height: 150px;
+    }
+}
